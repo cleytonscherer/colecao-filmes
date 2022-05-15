@@ -12,3 +12,11 @@ main {
   flex: 1 0 auto;
   padding: 0px !important;
 }
+
+header {
+  background-color: var(--primary);
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}

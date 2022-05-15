@@ -1,19 +1,38 @@
 //import * as $ from 'jquery';
-import * as M from 'materialize-css';
-
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { Filme } from './models/filme.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit{
-  @ViewChild('mobile') sideNav?: ElementRef;
+export class AppComponent {
 
-  ngAfterViewInit(): void {
-    //let $sideNav = $('#mobile-demo');
-    //M.Sidenav.init($sideNav);
-    M.Sidenav.init(this.sideNav?.nativeElement);
+  /*
+  codebar!: number;
+  title!: string;
+  duration!: number;
+  rating!: number;
+  gender!: string;
+  */
+
+  filme!: Filme;
+  filmes: Filme[] = [];
+
+  cadastrarFilme($event: any) {
+
+    /*
+    console.log($event);
+    this.codebar = $event.codebar;
+    this.title = $event.title;
+    this.duration = $event.duration;
+    this.rating = $event.rating;
+    this.gender = $event.gender;
+    */
+
+    this.filme = $event;
+    this.filmes.push(this.filme);
   }
+
 }

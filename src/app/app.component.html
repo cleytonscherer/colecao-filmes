@@ -1,13 +1,13 @@
-<header>
-  <app-menu></app-menu>
-</header>
+<app-menu></app-menu>
 
-<!--main-->
 <main>
+  <app-cad-filme (aoCadastrarFilme)="cadastrarFilme($event)"></app-cad-filme>
+
+  <app-lista-filmes [filmes]="filmes"></app-lista-filmes>
+
   <router-outlet></router-outlet>
 </main>
-<!--fim main-->
 
-<!-- footer -->
-<app-footer></app-footer>
-<!-- fim footer -->
+<footer>
+  <app-footer></app-footer>
+</footer>
