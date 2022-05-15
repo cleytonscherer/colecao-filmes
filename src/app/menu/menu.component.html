@@ -1,23 +1,7 @@
-<!-- menu-->
-<div class="navbar-fixed" style="z-index: 1001 !important">
-  <nav>
-    <div class="nav-wrapper blue-grey accent-4">
-      <div class="container">
-        <a class="brand-logo" href="#">
-          <img class="my-logo" [src]="imagem_logo" />
-        </a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-          <i class="material-icons">menu</i>
-        </a>
-        <ul class="right hide-on-med-and-down">
-          <li><a [href]="cadFilmeUrl" class="flow-text">{{ cadFilmeDesc }}</a></li>
-          <li><a [href]="listarFilmesUrl" class="flow-text">{{ listarFilmesDesc }} </a></li>
-          <li><a [href]="cadGeneroUrl" class="flow-text">{{ cadGeneroDesc }}</a></li>
-          <li><a [href]="listarGenerosUrl" class="flow-text">{{ listarGenerosDesc }}</a></li>
-          <li><a [href]="sobreUrl" class="flow-text">{{ sobreDesc }}</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-<!-- fim menu-->
+<header>
+  <a routerLink="cad-filme" >Cadastrar Filme</a>
+  <!--<a routerLink="lista-filmes" >Listar Filmes</a>-->
+  <a routerLink="cad-genero" >Cadastrar Gênero</a>
+  <a routerLink="lista-generos" >Listar Gêneros</a>
+  <a routerLink="sobre" >Sobre</a>
+</header>

@@ -23,6 +23,7 @@
     "materialize-css": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "webstorage-utils": "^1.2.8",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
