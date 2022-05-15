@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Genero } from '../models/genero.model';
 
 @Component({
@@ -14,9 +15,14 @@ export class CadGeneroComponent implements OnInit {
 
   genero: Genero = new Genero(this.gender);
 
-  constructor() { }
+  generoForm!: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.generoForm = this.formBuilder.group({
+      gender:   ['',[Validators.required]]
+    });
   }
 
   cadastrarGenero() {
@@ -25,6 +31,12 @@ export class CadGeneroComponent implements OnInit {
     this.genero = {gender: this.gender};
     console.table(this.genero);
     this.aoCadastrarGenero.emit(this.genero);
+
+    localStorage.setItem('genero', JSON.stringify(this.genero));
+    localStorage.setItem('gender', this.genero.gender);
+
+    //const mensagem = `Filme ${this.filme.title} cadastrado com sucesso!`;
+    window.alert(`Gênero ${this.genero.gender} cadastrado com sucesso!`);
   }
 
 }

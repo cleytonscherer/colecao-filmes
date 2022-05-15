@@ -1,5 +1,5 @@
 <section class="container">
-  <form class="formulario" (ngSubmit)="cadastrarGenero()">
+  <form class="formulario" (ngSubmit)="cadastrarGenero()" [formGroup]="generoForm">
     <h2 class="formulario__titulo">Cadastro de Gênero</h2>
 
     <!--
@@ -10,8 +10,25 @@
     -->
 
     <div class="form-field">
-      <label class="form-field__label" for="descGender">Gênero</label>
-      <input class="form-field__input" id="descGender" type="text" [(ngModel)]="gender" name="gender">
+      <label class="form-field__label" for="descGender">Gênero *</label>
+      <input class="form-field__input"
+            id="descGender"
+            type="text"
+            required
+            autofocus
+            pattern="^(\s?[A-ZÀ-Ù][a-zà-ú]*)+"
+            [(ngModel)]="gender"
+            name="gender"
+            formControlName="gender"
+      />
+      <app-mensagem
+        *ngIf="generoForm.get('gender')?.errors?.['required'] && generoForm.get('gender')?.touched"
+        mensagem="Gênero deve ser informado">
+      </app-mensagem>
+      <app-mensagem
+        *ngIf="generoForm.get('gender')?.errors && generoForm.get('gender')?.touched"
+        mensagem="Gênero inválido">
+      </app-mensagem>
     </div>
 
     <div class="botao-wrapper">

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,8 +11,8 @@ import { CadGeneroComponent } from './cad-genero/cad-genero.component';
 import { ListaFilmesComponent } from './lista-filmes/lista-filmes.component';
 import { ListaGenerosComponent } from './lista-generos/lista-generos.component';
 import { SobreComponent } from './sobre/sobre.component';
-import { FormsModule } from '@angular/forms';
 import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
+import { MensagemComponent } from './mensagem/mensagem.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { DetalheFilmeComponent } from './detalhe-filme/detalhe-filme.component';
     ListaFilmesComponent,
     ListaGenerosComponent,
     SobreComponent,
-    DetalheFilmeComponent
+    DetalheFilmeComponent,
+    MensagemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
