@@ -1,13 +1,23 @@
 <!-- menu-->
-<div>
+<div class="navbar-fixed" style="z-index: 1001 !important">
   <nav>
-    <ul>
-      <li><a href="#">Cadastrar Filme</a></li>
-      <li><a href="#">Listar Filmes</a></li>
-      <li><a href="#">Cadastrar Gênero</a></li>
-      <li><a href="#">Listar Gêneros</a></li>
-      <li><a href="#">Sobre</a></li>
-    </ul>
+    <div class="nav-wrapper blue-grey accent-4">
+      <div class="container">
+        <a class="brand-logo" href="#">
+          <img class="my-logo" [src]="imagem_logo" />
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+          <li><a [href]="cadFilmeUrl" class="flow-text">{{ cadFilmeDesc }}</a></li>
+          <li><a [href]="listarFilmesUrl" class="flow-text">{{ listarFilmesDesc }} </a></li>
+          <li><a [href]="cadGeneroUrl" class="flow-text">{{ cadGeneroDesc }}</a></li>
+          <li><a [href]="listarGenerosUrl" class="flow-text">{{ listarGenerosDesc }}</a></li>
+          <li><a [href]="sobreUrl" class="flow-text">{{ sobreDesc }}</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </div>
 <!-- fim menu-->

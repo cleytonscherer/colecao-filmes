@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  imagem_logo = './assets/resources/images/logo.png';
+
+  copyRight = ' Copyright - Todos os direitos reservados';
+
   constructor() { }
 
   ngOnInit(): void {
