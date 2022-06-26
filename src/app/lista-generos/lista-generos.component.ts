@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Genero } from '../models/genero.model';
+import { GeneroService } from '../servicos/genero.service';
 
 @Component({
   selector: 'app-lista-generos',
@@ -8,11 +10,17 @@ import { Genero } from '../models/genero.model';
 })
 export class ListaGenerosComponent implements OnInit {
 
-  generos: Genero[] = [];
+  generos: Genero[];
 
-  constructor() { }
+  constructor(private generoService: GeneroService) {
+    this.generos = [];
+  }
 
   ngOnInit(): void {
+    this.generoService.fullList().subscribe((generos: Genero[]) => {
+      console.table(generos);
+      this.generos = generos;
+    })
   }
 
 }

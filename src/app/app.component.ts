@@ -17,22 +17,25 @@ export class AppComponent {
   gender!: string;
   */
 
+  /*
   filme!: Filme;
   filmes: Filme[] = [];
+  */
 
+  /*
   cadastrarFilme($event: any) {
 
-    /*
-    console.log($event);
-    this.codebar = $event.codebar;
-    this.title = $event.title;
-    this.duration = $event.duration;
-    this.rating = $event.rating;
-    this.gender = $event.gender;
-    */
+    //console.log($event);
+    //this.codebar = $event.codebar;
+    //this.title = $event.title;
+    //this.duration = $event.duration;
+    //this.rating = $event.rating;
+    //this.gender = $event.gender;
+
 
     this.filme = $event;
     this.filmes.push(this.filme);
   }
+  */
 
 }

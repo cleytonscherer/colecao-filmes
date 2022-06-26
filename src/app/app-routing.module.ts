@@ -10,12 +10,13 @@ import { SobreComponent } from './sobre/sobre.component';
 const routes: Routes = [
   { path: '', redirectTo: 'lista-filmes', pathMatch: 'full' },
   { path: 'cad-filme', component: CadFilmeComponent },
-  { path: 'detalhe-filme/:id', component: DetalheFilmeComponent },
-  { path: 'lista-filmes/', component: ListaFilmesComponent },
+  { path: 'lista-filmes', component: ListaFilmesComponent },
   { path: 'cad-genero', component: CadGeneroComponent },
   { path: 'lista-generos', component: ListaGenerosComponent },
   { path: 'sobre', component: SobreComponent }
 ];
+
+  /*{ path: 'detalhe-filme/:id', component: DetalheFilmeComponent },*/
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

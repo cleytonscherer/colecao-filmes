@@ -2,6 +2,7 @@
   <h2 class="titulo">Lista de Filmes</h2>
   <table class="tabela">
     <thead class="tabela__cabecalho">
+      <!-- <th class="tabela__cabecalho__conteudo">ID</th> -->
       <th class="tabela__cabecalho__conteudo">Código de Barras</th>
       <th class="tabela__cabecalho__conteudo">Título</th>
       <th class="tabela__cabecalho__conteudo">Duração</th>
@@ -13,6 +14,7 @@
         *ngFor="let filme of filmes"
         (click)="onClickItem(filme)"
         [routerLink]="['/detalhe-filme', filme.id]" >
+        <!-- <td class="tabela__conteudo"> {{ filme.id }} </td> -->
         <td class="tabela__conteudo"> {{ filme.codebar }} </td>
         <td class="tabela__conteudo"> {{ filme.title }} </td>
         <td class="tabela__conteudo"> {{ filme.duration }} </td>

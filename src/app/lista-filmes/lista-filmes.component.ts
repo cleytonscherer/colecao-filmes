@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 import { Filme } from '../models/filme.model';
+import { FilmeService } from '../servicos/filme.service';
 
 @Component({
   selector: 'app-lista-filmes',
@@ -10,11 +12,23 @@ import { Filme } from '../models/filme.model';
 export class ListaFilmesComponent implements OnInit {
 
   //filme!: Filme;
-  @Input() filmes: Filme[] = [];
+  //@Input() filmes: Filme[] = [];
+  filmes: Filme[];
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private filmeService: FilmeService
+    ) {
+      this.filmes = [];
+    }
+
 
   ngOnInit(): void {
+    //this.filmes = this.filmeService.listaFilmes;
+    this.filmeService.fullList().subscribe((filmes : Filme[]) =>  {
+      console.table(filmes);
+      this.filmes = filmes;
+    });
   }
 
   /*
@@ -26,4 +40,5 @@ export class ListaFilmesComponent implements OnInit {
   onClickItem(filme: Filme) {
     this.router.navigate(['/detalhe-filme', filme?.id]);
   }
+
 }
