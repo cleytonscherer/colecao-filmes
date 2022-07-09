@@ -1,0 +1,21 @@
+.my-logo {
+  height: 64px;
+}
+
+.ativo {
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  background-color: var(--primary);
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+

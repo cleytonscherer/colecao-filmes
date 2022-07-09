@@ -1,0 +1,101 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "codebar": 7892110024495,
+      "title": "Ben Hur",
+      "duration": 223,
+      "rating": 12,
+      "gender": "Ação",
+      "genderID": 1
+    },
+    {
+      "id": 2,
+      "codebar": 7896012252895,
+      "title": "Pearl Harbor",
+      "duration": 183,
+      "rating": 14,
+      "gender": "Guerra",
+      "genderID": 2
+    },
+    {
+      "id": 3,
+      "codebar": 7896012213247,
+      "title": "Conan, O Destruidor",
+      "duration": 101,
+      "rating": 14,
+      "gender": "Ação",
+      "genderID": 1
+    },
+    {
+      "codebar": 7892141401364,
+      "title": "A Lista de Schindler",
+      "duration": 134,
+      "rating": "12",
+      "gender": "Drama",
+      "id": 4
+    },
+    {
+      "codebar": 7897119442264,
+      "title": "O Pianista",
+      "duration": 148,
+      "rating": "14",
+      "gender": "Drama",
+      "id": 5
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "gender": "Ação"
+    },
+    {
+      "id": 2,
+      "gender": "Guerra"
+    },
+    {
+      "gender": "Comédia Romântica",
+      "id": 3
+    },
+    {
+      "gender": "Terror",
+      "id": 4
+    },
+    {
+      "gender": "Cinema Nacional",
+      "id": 5
+    },
+    {
+      "gender": "Comédia",
+      "id": 6
+    },
+    {
+      "gender": "Ficção Científica",
+      "id": 7
+    },
+    {
+      "gender": "Animação",
+      "id": 8
+    },
+    {
+      "gender": "Musical",
+      "id": 9
+    },
+    {
+      "gender": "Documentário",
+      "id": 10
+    },
+    {
+      "gender": "Suspense",
+      "id": 11
+    },
+    {
+      "gender": "Western",
+      "id": 12
+    },
+    {
+      "gender": "Romance",
+      "id": 13
+    }
+  ]
+}
