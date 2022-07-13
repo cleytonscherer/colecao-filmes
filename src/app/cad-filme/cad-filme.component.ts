@@ -42,11 +42,12 @@ export class CadFilmeComponent implements OnInit {
         console.log(resultado);
         window.alert(`Filme: ${this.filme.title} cadastrado com sucesso!`);
         this.router.navigateByUrl('lista-filmes');
+        this.filmeForm.reset();
       }, error => {
         console.error(error)
         window.alert(error);
       });
-      
+
 
       /* com promises
       let promise = new Promise((resolve, reject) => {

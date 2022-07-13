@@ -39,17 +39,19 @@ export class CadGeneroComponent implements OnInit {
     console.table(this.genero);
     //this.aoCadastrarGenero.emit(this.genero);
 
-    /* com observable
+    // com observable
     this.generoService.save(this.genero).subscribe(resultado => {
       console.log(resultado);
       window.alert(`Gênero ${this.genero.gender} cadastrado com sucesso!`);
       this.router.navigateByUrl('lista-generos');
+      this.generoForm.reset();
     }, error => {
       console.error(error)
     });
-    */
 
-    /* com promises */
+
+    /*
+    // com promises
     let promise = new Promise((resolve, reject) => {
       this.generoService.save(this.genero)
       .toPromise()
@@ -64,8 +66,9 @@ export class CadGeneroComponent implements OnInit {
         window.alert(reject);
       })
     });
+    */
 
-    
+
 
     /* com localStorage
     localStorage.setItem('genero', JSON.stringify(this.genero));
