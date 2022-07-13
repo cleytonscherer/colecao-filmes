@@ -12,8 +12,7 @@
     <tbody>
       <tr class="tabela__linha"
         *ngFor="let filme of filmes"
-        (click)="onClickItem(filme)"
-        [routerLink]="['/detalhe-filme', filme.id]" >
+        [routerLink]="['/filme', filme.id]" >
         <!-- <td class="tabela__conteudo"> {{ filme.id }} </td> -->
         <td class="tabela__conteudo"> {{ filme.codebar }} </td>
         <td class="tabela__conteudo"> {{ filme.title }} </td>

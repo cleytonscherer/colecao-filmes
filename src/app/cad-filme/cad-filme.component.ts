@@ -37,7 +37,7 @@ export class CadFilmeComponent implements OnInit {
       console.table(this.filme);
       //this.aoCadastrarFilme.emit(this.filme);
 
-      /* com observable
+      /* com observable */
       this.filmeService.save(this.filme).subscribe(resultado => {
         console.log(resultado);
         window.alert(`Filme: ${this.filme.title} cadastrado com sucesso!`);
@@ -46,10 +46,9 @@ export class CadFilmeComponent implements OnInit {
         console.error(error)
         window.alert(error);
       });
-      */
+      
 
-
-      /* com promises */
+      /* com promises
       let promise = new Promise((resolve, reject) => {
         this.filmeService.save(this.filme)
         .toPromise()
@@ -64,7 +63,8 @@ export class CadFilmeComponent implements OnInit {
           window.alert(reject);
         })
       });
-      
+      */
+
 
       /* com localStorage
       localStorage.setItem('filme', JSON.stringify(this.filme));

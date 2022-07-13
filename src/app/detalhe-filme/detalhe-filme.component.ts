@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import WebStorageUtils from 'webstorage-utils';
+
 import { Filme } from '../models/filme.model';
+import { FilmeService } from '../servicos/filme.service';
 //import { Constants } from 'src/app/util/constants';
 
 @Component({
@@ -13,31 +14,18 @@ export class DetalheFilmeComponent implements OnInit {
 
   filme!: Filme;
 
-  id:  string = '';
-  codebar: number = 0;
-  title: string = '';
-  duration: number = 0;
-  rating: number = 0;
-  gender: string = '';
-
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private filmeService: FilmeService
+  ) { }
 
   ngOnInit(): void {
-    /*
-    let idParam = this.route.snapshot.params['id'];
-    let user = WebStorageUtils.get(Constants.USERNAME_KEY) as User;
-    let filmes = user.filmes;
+    const routeParams = this.route.snapshot.paramMap;
+    const filmeIdFromRoute = Number(routeParams.get('filmeId'));
 
-    filmes = filmes.filter((f) => {
-      return f.id == idParam;
-    });
+    /* this.filme = filmes.find(filme => filme.id === filmeIdFromRoute); */
 
-    if (filmes.length == 0) {
-      alert('Filme não foi encontrado!');
-    }
-
-    this.filme = filmes[0];
-    */
+    /* this.filme = this.filmeService.getFilmeById(filmeIdFromRoute).subscribe(); */
 
   }
 

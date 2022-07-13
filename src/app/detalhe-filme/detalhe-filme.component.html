@@ -1,3 +1,14 @@
+<h2>Detalhes do Filme</h2>
+
+<div * ngIf="filme">
+  <h3>{{ filme.codebar }} </h3>
+  <h3>{{ filme.title }} </h3>
+  <h3>{{ filme.duration }} </h3>
+  <h3>{{ filme.rating }} </h3>
+  <h3>{{ filme.gender }} </h3>
+</div>
+
+<!---
 <section class="container">
     <h2 class="formulario__titulo">Detalhes do Filme</h2>
 
@@ -31,3 +42,4 @@
       <input class="form-field__input" id="gender" type="text" name="gender" [value]="gender" readonly>
     </div>
 </section>
+-->

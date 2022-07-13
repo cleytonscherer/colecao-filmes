@@ -8,12 +8,13 @@ import { ListaGenerosComponent } from './lista-generos/lista-generos.component';
 import { SobreComponent } from './sobre/sobre.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'lista-filmes', pathMatch: 'full' },
+  /* { path: '', redirectTo: 'lista-filmes', pathMatch: 'full' }, */
   { path: 'cad-filme', component: CadFilmeComponent },
   { path: 'lista-filmes', component: ListaFilmesComponent },
   { path: 'cad-genero', component: CadGeneroComponent },
   { path: 'lista-generos', component: ListaGenerosComponent },
-  { path: 'sobre', component: SobreComponent }
+  { path: 'sobre', component: SobreComponent },
+  { path: 'filme/:filmeId', component: DetalheFilmeComponent },
 ];
 
   /*{ path: 'detalhe-filme/:id', component: DetalheFilmeComponent },*/

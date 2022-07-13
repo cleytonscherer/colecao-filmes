@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SobreComponent implements OnInit {
 
+  logo = './assets/resources/images/logo.png';
+
+  utfpr01 = './assets/resources/images/utfpr01.png';
+
   constructor() { }
 
   ngOnInit(): void {
