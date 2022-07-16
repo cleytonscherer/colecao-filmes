@@ -6,7 +6,10 @@
       <th class="tabela__cabecalho__conteudo">Gênero</th>
     </thead>
     <tbody>
-      <tr class="tabela__linha" *ngFor="let genero of generos">
+      <tr class="tabela__linha"
+        *ngFor="let genero of generos"
+        [routerLink]="['/genero', genero.id]"
+        >
         <!-- <td class="tabela__conteudo"> {{ genero.id }} </td> -->
         <td class="tabela__conteudo"> {{ genero.gender }} </td>
     </tr>

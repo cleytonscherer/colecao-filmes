@@ -1,21 +1,33 @@
+header {
+  background-color: var(--primary);
+  color: white;
+  padding: 20px 0;
+}
+
 .logo {
   height: 32px;
 }
 
-.ativo {
-  display: none;
+.caixa {
+  position: relative;
+  width: 940px;
+  margin: 0 auto;
 }
 
-a {
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 30px;
+}
+
+nav a {
   color: white;
   text-decoration: none;
 }
 
-header {
-  background-color: var(--primary);
-  padding: 10px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-}
 

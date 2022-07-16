@@ -1,0 +1,10 @@
+footer {
+  background-color: var(--primary);
+  color: white;
+  padding: 5px 0;
+  text-align: center;
+}
+
+.logo {
+  height: 32px;
+}

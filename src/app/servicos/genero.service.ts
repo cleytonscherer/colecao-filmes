@@ -28,4 +28,8 @@ export class GeneroService {
   save(genero: Genero): Observable<Genero> {
     return this.httpClient.post<Genero>(this.URL, genero);
   }
+
+  update(genero: Genero): Observable<Genero> {
+    return this.httpClient.put<Genero>(`${this.URL}/${genero.id}`, genero);
+  }
 }

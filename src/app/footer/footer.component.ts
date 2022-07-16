@@ -7,16 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  currentDate: Date;
+  logo_branco = './assets/resources/images/logo-branco.png';
 
   constructor() {
-    this.currentDate = new Date();
   }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.currentDate = new Date();
-    }, 1000);
   }
 
 }

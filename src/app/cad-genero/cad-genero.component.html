@@ -15,9 +15,9 @@
             id="descGender"
             type="text"
             required
-            autofocus
             pattern="^(\s?[A-ZÀ-Ù][a-zà-ú]*)+"
-            [(ngModel)]="gender"
+            autofocus
+            [(ngModel)]="genero.gender"
             name="gender"
             formControlName="gender"
       />
@@ -31,9 +31,22 @@
       </app-mensagem>
     </div>
 
+    <div>
+      <app-mensagem
+        *ngIf="!generoForm.valid"
+        mensagem="Formulário inválido">
+      </app-mensagem>
+    </div>
+
+    <div class="botao-wrapper">
+      <button class="botao" type="submit" [disabled]="!generoForm.valid">Cadastrar</button>
+    </div>
+
+    <!--
     <div class="botao-wrapper">
       <button class="botao" type="submit">Cadastrar</button>
     </div>
+    -->
 
   </form>
 </section>

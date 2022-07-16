@@ -23,9 +23,12 @@ export class DetalheFilmeComponent implements OnInit {
     const routeParams = this.route.snapshot.paramMap;
     const filmeIdFromRoute = Number(routeParams.get('filmeId'));
 
-    /* this.filme = filmes.find(filme => filme.id === filmeIdFromRoute); */
+    console.log('Filme ID: ' + filmeIdFromRoute);
 
-    /* this.filme = this.filmeService.getFilmeById(filmeIdFromRoute).subscribe(); */
+    this.filmeService.getFilmeById(filmeIdFromRoute).subscribe(filme => {
+      console.log(filme);
+      this.filme = filme;
+    });
 
   }
 
